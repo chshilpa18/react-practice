@@ -1,0 +1,38 @@
+Mounting - constructor, static getDerivedStateFromProps, render and componentDidmount
+
+constructor(props) - a spl fn tht wl get cld whnvr a nw cmpnt is crtd.
+intlzng state and binding evnt hndlrs.
+DO not cause side effact - ex HTTP Rqst.
+Defining you own constructor requires - calling super(props).
+We can access this.props only after we hav initiallly call suoper(props).
+Constructor is the only place whr u are can change or set the state by directly
+overwriting this.state field.
+In all other scenarios you have to use this.setState().
+
+getDerivedStateFromProps(props,state) - Rarly used .
+When state of component depends on changes in props over time.
+Eg. you have to set the state and it depends on the props being passed.
+since it is static - does not have access to this keyword, so you cannot call this.setState().
+So instead return the object that represent the new state of the component.
+Do not cause side effacts.
+
+render() - only required method in a class component.
+read props and state and return JSX.
+Pure function.
+Do not change any state here, interact wit hDOM or make any ajax calls.
+Children component lifecycle methods are also executed
+
+componentDidMount() - perfect place to cause side effact.
+Interact with DOM, AJAX calls, HTTP Requests.
+
+Updating -
+static getDerivedStateFromProps (props, state) - return null or obj with updated state
+shouldComponentUpdate - (nextprop, nextstate) - if the component shd rerender or not
+render -
+getSnapshotBeforeUpdate( prevprops, prev State) - capture infor from DOM - return null or val that will be used as third parameter in next method
+componentDidUpdate - called after render - only once -so can make ajax calls after comparing prev and current props
+
+Unmounting - componentWillUnmount - before compo is unmounted , cleanup, dont call setState
+Error Handling -
+static getDerivedStateFromError-
+componentDidCatch - during renderring, or lifecycle method, or in constructor of any child component

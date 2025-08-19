@@ -21,12 +21,13 @@ import InlineCss from "./components/styling/InlineCss";
 import './components/styling/appStyle.css'
 import styles from './components/styling/appStyle.module.css'
 import Form from "./components/formhandling/Form";
+import LifeCycleA from "./components/componentlifecycle/LifeCycleA";
 
 class App extends Component {
   render() {
     return (
-
-      <Form />
+      <LifeCycleA />
+      //<Form />
       // <div>
       //   <h1 className={styles.success}>Success</h1>
       //   <h1 className='error'>Error</h1>
