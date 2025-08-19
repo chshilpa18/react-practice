@@ -35,7 +35,7 @@ export class form extends Component {
         })
     }
     handleSubmit = event => {
-        alert(`${username} ${comments} ${topic}`)
+        alert(`${this.state.username} ${this.state.comments} ${this.state.topic}`)
         event.preventDefault();
     }
 

@@ -20,7 +20,7 @@ import Stylesheet from "./components/styling/Stylesheet";
 import InlineCss from "./components/styling/InlineCss";
 import './components/styling/appStyle.css'
 import styles from './components/styling/appStyle.module.css'
-import Form from "./components/formhandling/form";
+import Form from "./components/formhandling/Form";
 
 class App extends Component {
   render() {
